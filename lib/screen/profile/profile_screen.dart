@@ -24,6 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         actions: const [CardButtonShared()],
       ),
       body: Obx(

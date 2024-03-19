@@ -76,7 +76,38 @@ class _DetailScreenState extends State<DetailScreen> {
                               ),
                               Padding(
                                 padding: EdgeInsets.all(4.2.w),
-                                child: Text('RM${product.price.toString()}'),
+                                child: Row(
+                                  children: [
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          const TextSpan(
+                                            text: 'RM',
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              color: Color.fromARGB(
+                                                  255, 171, 34, 34),
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: ((100 -
+                                                        pd.productById.value
+                                                            .discountPercentage!) *
+                                                    pd.productById.value
+                                                        .price! /
+                                                    100)
+                                                .toStringAsFixed(2),
+                                            style: const TextStyle(
+                                              fontSize: 20,
+                                              color: Color.fromARGB(
+                                                  255, 171, 34, 34),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),

@@ -44,6 +44,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         title: GestureDetector(
             onTap: () {
               Preference.remove(Preference.order);

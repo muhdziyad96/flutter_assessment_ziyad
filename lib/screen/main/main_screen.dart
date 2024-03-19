@@ -36,6 +36,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         title: Obx(() {
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
